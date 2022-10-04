@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behance UI Clone Using Tailwind CSS</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="font-notoSans">
+    <!-- Header Start -->
+    <header class="">
+        <div class="header-top border border-b-2">
+            <!-- Top Container -->
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center gap-x-5">
+                    <!-- Logo -->
+                    <a href="">
+                        <img src="./assets/img/logo.svg" alt="" class="h-4">
+                    </a>
+                    <!-- Top Nav -->
+                    <nav class="">
+                        <a href="" class="topNavLink">Discover</a>
+                        <a href="" class="topNavLink">Livestreams</a>
+                        <a href="" class="topNavLink">Hire</a>
+                        <a href="" class="topNavLink">Jobs</a>
+                    </nav>
+                </div>
+                <div class="flex gap-x-3 items-center">
+                    <button class="rounded-full border px-5 py-1.5 text-sm font-semibold font-notoSans hover:bg-gray-100">Log In</button>
+                    <button class="rounded-full border px-5 py-1.5 text-sm font-semibold font-notoSans bg-blue-600 text-slate-50 hover:bg-blue-800">Sign Up</button>
+                    <a href="">
+                        <img src="./assets/img/adobe.svg" alt="" class="h-[1.20rem] ml-4 hover:opacity-60">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <div class="py-5">
+            <!-- Menu Container -->
+            <div class="container mx-auto rounded-full flex justify-between border">
+                <!-- Searchbar -->
+                <form action="" class="relative flex-1 border-r-2">
+                    <label for="search" class="absolute left-5 top-3 font-bold text-xl">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <input type="search" id="search" class="searchInput" placeholder="Search the Creative World at work">
+                </form>
+                <!-- Navigation -->
+                <nav class="flex flex-1 items-center justify-around px-3">
+                    <a href="" class="navLink bg-black text-white hover:text-black">Projects</a>
+                    <a href="" class="navLink">Images</a>
+                    <a href="" class="navLink">Prototypes</a>
+                    <a href="" class="navLink">Streams</a>
+                    <a href="" class="navLink">People</a>
+                    <a href="" class="navLink">Moodboards</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+</body>
+</html>
