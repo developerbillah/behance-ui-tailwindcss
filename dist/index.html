@@ -13,7 +13,7 @@
 <body class="font-notoSans">
     <!-- Header Start -->
     <header class="">
-        <div class="header-top border border-b-2">
+        <div class="hidden header-top border border-b-2 md:block lg:block">
             <!-- Top Container -->
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center gap-x-5">
@@ -22,7 +22,7 @@
                         <img src="./assets/img/logo.svg" alt="" class="h-4">
                     </a>
                     <!-- Top Nav -->
-                    <nav class="">
+                    <nav>
                         <a href="" class="topNavLink">Discover</a>
                         <a href="" class="topNavLink">Livestreams</a>
                         <a href="" class="topNavLink">Hire</a>
@@ -40,7 +40,7 @@
         </div>
         
         <!-- Navigation Menu -->
-        <div class="py-5">
+        <div class="py-5 hidden md:block lg:block">
             <!-- Menu Container -->
             <div class="container mx-auto rounded-full flex justify-between border">
                 <!-- Searchbar -->
@@ -61,7 +61,83 @@
                 </nav>
             </div>
         </div>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden lg:hidden">
+           <div class="mobile-navbar  border-b-[0.1rem]">
+                <!-- Navigation  -->
+                <nav class="flex justify-between items-center gap-x-4 px-4 py-5 text-xl">
+                    <button id="openNav">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-behance"></i>
+                    </a>
+                    <a href="" class="ml-auto">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </nav>
+                <!-- Navigation End -->
+
+                <!-- Mobile Side Nav Start -->
+                <div id="mobileSideNav" class="fixed top-0 h-full w-64 -left-64 bg-gray-100 shadow-sm z-10 transition-all delay-75">
+        
+                    <div class="navArea w-64">
+                        <div class="navHeader flex justify-between p-5">
+                           
+                            <button class="" id="closeNav">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+
+                            <button class="border rounded-full px-3 py-1 text-sm">Log In</button>
+                        </div>
+                        <div class="mt-5">
+                            <nav>
+                                <a href="" class="topNavLink block w-full">Discover</a>
+                                <a href="" class="topNavLink block w-full">Livestreams</a>
+                                <a href="" class="topNavLink block w-full">Hire</a>
+                                <a href="" class="topNavLink block w-full">Jobs</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Side Nav End -->
+           </div>
+
+            <!-- Mibile Searchbar -->
+            <div class="border-b-[0.1rem] py-4">
+                <!-- Searchbar -->
+                <div class="searach-area rounded-full flex justify-between border m-3">
+                    <form action="" class="relative flex-1 border-r-2">
+                        <label for="search" class="absolute left-5 top-3 font-bold text-xl">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </label>
+                        <input type="search" id="search" class="searchInput" placeholder="Search the Creative World at work">
+                    </form>
+    
+                    <button class="flex flex-1 justify-around items-center">
+                        <span class="font-bold">Projects</span>
+                        <span><i class="fa-solid fa-sort-down"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- Header End -->
+
+    <script>
+        const mobileSideNav = document.getElementById('mobileSideNav');
+        const openNav = document.getElementById('openNav');
+        const closeNav = document.getElementById('closeNav');
+
+        openNav.addEventListener('click', function(){
+            mobileSideNav.style.left = '0px';
+        });
+
+        closeNav.addEventListener('click', function(){
+            mobileSideNav.style.left = '-256px';
+        });
+    </script>
 </body>
 </html>
