@@ -12,8 +12,8 @@
 </head>
 <body class="font-notoSans">
     <!-- Header Start -->
-    <header class="">
-        <div class="hidden header-top border border-b-2 md:block lg:block">
+    <header class="sticky top-0 bg-white z-10">
+        <div class="hidden header-top border border-b-[0.1rem] md:block lg:block">
             <!-- Top Container -->
             <div class="container mx-auto flex justify-between items-center">
                 <div class="flex items-center gap-x-5">
@@ -81,26 +81,29 @@
                 <!-- Navigation End -->
 
                 <!-- Mobile Side Nav Start -->
-                <div id="mobileSideNav" class="fixed top-0 h-full w-64 -left-64 bg-gray-100 shadow-sm z-10 transition-all delay-75">
+                <div id="mobileSideNav" class="fixed top-0 h-full w-full -left-full bg-gray-700 bg-opacity-60 shadow-sm z-10 transition-all delay-75">
         
-                    <div class="navArea w-64">
-                        <div class="navHeader flex justify-between p-5">
-                           
-                            <button class="" id="closeNav">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-
-                            <button class="border rounded-full px-3 py-1 text-sm">Log In</button>
-                        </div>
-                        <div class="mt-5">
-                            <nav>
-                                <a href="" class="topNavLink block w-full">Discover</a>
-                                <a href="" class="topNavLink block w-full">Livestreams</a>
-                                <a href="" class="topNavLink block w-full">Hire</a>
-                                <a href="" class="topNavLink block w-full">Jobs</a>
-                            </nav>
+                    <div class="w-64 bg-white h-full">
+                        <div class="navArea w-64">
+                            <div class="navHeader flex justify-between p-5">
+                               
+                                <button class="" id="closeNav">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+    
+                                <button class="border rounded-full px-3 py-1 text-sm">Log In</button>
+                            </div>
+                            <div class="mt-5">
+                                <nav>
+                                    <a href="" class="topNavLink block w-full">Discover</a>
+                                    <a href="" class="topNavLink block w-full">Livestreams</a>
+                                    <a href="" class="topNavLink block w-full">Hire</a>
+                                    <a href="" class="topNavLink block w-full">Jobs</a>
+                                </nav>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
                 <!-- Mobile Side Nav End -->
            </div>
@@ -127,7 +130,7 @@
     <!-- Header End -->
 
    <!-- Sorting Area -->
-    <section class="hidden border-b-[0.1rem] pb-6 md:block lg:block">
+    <section class="hidden border-b-[0.1rem] pb-6 md:block lg:block sticky top-[10.5rem] bg-white z-10">
         <!-- Container -->
         <div class="container mx-auto flex justify-between">
             <!-- Filter Options Start -->
@@ -138,7 +141,8 @@
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
                         </span>
                         <input name="" id="creative-fields" class="bg-transparent p-[0.4rem] focus:outline-none pl-10 peer border focus:border-blue-700 w-[10.8rem] cursor-pointer  rounded-[0.305rem] transition-colors duration-200  hover:border hover:border-black">
-                        <label for="creative-fields" class="absolute font-semibold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200">Creative Fields</label>
+
+                        <label for="creative-fields" class="absolute font-bold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200 text-sm">Creative Fields</label>
                     </div>
                 </div>
 
@@ -148,17 +152,19 @@
                             <i class="fa-solid fa-screwdriver-wrench"></i>
                         </span>
                         <input name="" id="select" class="bg-transparent p-[0.4rem] focus:outline-none pl-10 peer border focus:border-blue-700 w-24 cursor-pointer  rounded-[0.305rem]  transition-colors duration-200  hover:border hover:border-black">
-                        <label for="select" class="absolute font-semibold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200">Tools</label>
+
+                        <label for="select" class="absolute font-bold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200 text-sm">Tools</label>
                     </div>
                 </div>
 
                 <div class="floatinItem">
                     <div class="floatingInput relative">
                         <span class="absolute left-3 top-2">
-                            <i class="fa-solid fa-palette"></i>
+                            <img src="./assets/img/colorWheel.png" alt="">
                         </span>
                         <input name="" id="colors" class="bg-transparent p-[0.4rem] focus:outline-none pl-10 peer border focus:border-blue-700 w-[6.310rem] cursor-pointer  rounded-[0.305rem]  transition-colors duration-200  hover:border hover:border-black">
-                        <label for="colors" class="absolute font-semibold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200">Colors</label>
+
+                        <label for="colors" class="absolute font-bold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200 text-sm">Colors</label>
                     </div>
                 </div>
 
@@ -168,7 +174,8 @@
                             <i class="fa-solid fa-location-dot"></i>
                         </span>
                         <input name="" id="locations" class="bg-transparent p-[0.4rem] focus:outline-none pl-10 peer border focus:border-blue-700 w-[8.3rem] cursor-pointer rounded-[0.305rem] transition-colors duration-200  hover:border hover:border-black">
-                        <label for="locations" class="absolute font-semibold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200">Locations</label>
+
+                        <label for="locations" class="absolute font-bold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200 text-sm">Locations</label>
                     </div>
                 </div>
 
@@ -178,7 +185,8 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                         </span>
                         <input name="" id="schools" class="bg-transparent p-[0.4rem] focus:outline-none pl-10 peer border focus:border-blue-700 w-[8.3rem] cursor-pointer rounded-[0.305rem] transition-colors duration-200  hover:border hover:border-black">
-                        <label for="schools" class="absolute font-semibold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200">Schools</label>
+
+                        <label for="schools" class="absolute font-bold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200 text-sm">Schools</label>
                     </div>
                 </div>
 
@@ -188,7 +196,8 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                         </span>
                         <input name="" id="source-files" class="bg-transparent p-[0.4rem] focus:outline-none pl-10 peer border focus:border-blue-700 w-[9rem] cursor-pointer rounded-[0.305rem] transition-colors duration-200  hover:border hover:border-black">
-                        <label for="source-files" class="absolute font-semibold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200">Source Files</label>
+
+                        <label for="source-files" class="absolute font-bold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200 text-sm">Source Files</label>
                     </div>
                 </div>
 
@@ -198,21 +207,621 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                         </span>
                         <input name="" id="subscriptions" class="bg-transparent p-[0.4rem] focus:outline-none pl-10 peer border focus:border-blue-700 w-[10rem] cursor-pointer rounded-[0.305rem] transition-colors duration-200  hover:border hover:border-black">
-                        <label for="subscriptions" class="absolute font-semibold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200">Subscriptions</label>
+
+                        <label for="subscriptions" class="absolute font-bold left-10 top-2 peer-focus:left-1 peer-focus:-top-[0.4rem] peer-focus:text-xs peer-focus:text-blue-700 cursor-pointer peer-focus:bg-white peer-focus:px-2 transition-all duration-200 text-sm">Subscriptions</label>
                     </div>
                 </div>
 
             </div>
             <!-- Filter Options End -->
 
-            <!-- Sorting Button  -->
+            <!-- Sorting Button -->
             <button class="flex flex-col hover:text-blue-600 transition-all duration-200">
                 <span class="text-xs font-semibold text-gray-500">Short</span>
                 <span>Recomended</span>
             </button>
+            <!-- Sorting Button End -->
         </div>
     </section>
    <!-- Sorting Area End -->
+
+   <!-- Display Work -->
+    <section class="py-4">
+        <!-- Container -->
+        <div class="container mx-auto ">
+
+            <div class="work-lists grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mx-5 md:mx-0 lg:mx-0">
+                <!-- Work Item 01 -->
+            <div class="work-item ">
+                <!-- Thumbnails -->
+                <div class="thumbnailn group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/101.png" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">Barking Store</a>
+                        <a href="" class="author text-xs block">Sonya Korshenboym</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 01 End -->
+
+            <!-- Work Item 02 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/104.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">Odissea</a>
+                        <a href="" class="author text-xs block">Cyril Dosnon</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">83</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">1.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 02 End -->          
+            
+            <!-- Work Item 03 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/106.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 03 End -->      
+            
+            <!-- Work Item 04 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/108.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 04 End -->   
+
+            <!-- Work Item 05 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/111.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 05 End --> 
+
+            <!-- Work Item 06 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/113.png" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 06 End --> 
+
+            <!-- Work Item 07 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/115.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 07 End --> 
+
+            <!-- Work Item 08 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/116.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 08 End --> 
+
+            <!-- Work Item 09 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/118.png" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 09 End --> 
+
+            <!-- Work Item 10 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/122.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 10 End --> 
+
+            <!-- Work Item 11 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/121.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 11 End --> 
+
+            <!-- Work Item 10 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/123.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 10 End --> 
+
+            <!-- Work Item 12 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/124.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 12 End --> 
+
+            <!-- Work Item 13 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/126.jpg" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 12 End --> 
+
+            <!-- Work Item 13 -->
+            <div class="work-item">
+                <!-- Thumbnails -->
+                <div class="thumbnail group relative">
+                    <img class="w-full h-full object-cover rounded-md" src="./assets/img/133.png" />
+
+                    <div class="itemOverlay">
+                        <div class="itemLabels">
+                            <img src="./assets/img/102.png" alt="">
+                        </div>
+                        <div class="label absolute top-2 left-3">
+                            <button class="rounded-full bg-gray-900 text-white text-sm px-3 py-1">
+                                <span><i class="fa-regular fa-folder-open"></i></span>
+                                <span>Save</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Meta -->
+                <div class="meta flex justify-between mt-2">
+                    <div>
+                        <a href="" class="title font-bold hover:underline block">NANU | Branding</a>
+                        <a href="" class="author text-xs block">Cuong Phan</a>
+                    </div>
+                    <div class="flex gap-x-3">
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-thumbs-up"></i></span>
+                            <span class="text-xs">963</span>
+                        </p>
+
+                        <p class="font-bold">
+                            <span class="text-gray-400"><i class="fa-solid fa-eye"></i></span>
+                            <span class="text-xs">6.2k</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Work Item 12 End --> 
+            </div>
+
+        </div>
+    </section>
+   <!-- Display Work End -->
+
+
 
     <script>
         const mobileSideNav = document.getElementById('mobileSideNav');
@@ -224,7 +833,7 @@
         });
 
         closeNav.addEventListener('click', function(){
-            mobileSideNav.style.left = '-256px';
+            mobileSideNav.style.left = '-100%';
         });
     </script>
 </body>
